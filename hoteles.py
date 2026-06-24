@@ -1,3 +1,9 @@
+def buscar_reserva(lista, nombre):
+    for i in range (len(lista)):
+        if lista[i]["huesped"] == nombre:
+            return i
+    return -1
+
 def validar_huesped(nombre):
     return nombre.strip() != ""
 
@@ -10,12 +16,6 @@ def validar_noches(noches):
     if noches.isdigit():
         return int(noches) > 0
     return False
-
-def buscar_reserva(lista, nombre):
-    for i in range (len(lista)):
-        if lista[i]["huesped"] == nombre:
-            return i
-    return -1
 
 def mostar_menu():
     print("******MENU PRINCIPAL******")
